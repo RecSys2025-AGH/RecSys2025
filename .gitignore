@@ -1,4 +1,5 @@
-data
+data/original_data
+data/processed_data
 .vscode
 
 # Byte-compiled / optimized / DLL files

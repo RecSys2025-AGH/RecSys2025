@@ -10,7 +10,7 @@ def load_data(data_folder):
     Returns:
         dict: dictionary containing the data with structure:
             {
-                "actions": {"add_to_cart", "page_visit", "product_buy", "remove_from_cart", "search_query"},
+                "events": {"add_to_cart", "page_visit", "product_buy", "remove_from_cart", "search_query"},
                 "products": {"product_properties"},
                 "inputs": {"relevant_clients"},
                 "targets": {"active_clients", "popularity_propensity_category", "popularity_propensity_sku", "propensity_category", "propensity_sku"}
