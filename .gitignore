@@ -1,4 +1,5 @@
-data
+data/original_data
+data/processed_data
 .vscode
 
 # Byte-compiled / optimized / DLL files
@@ -174,3 +175,4 @@ cython_debug/
 .pypirc
 Pipfile
 Pipfile.lock
+.gitignore
