@@ -69,3 +69,19 @@ def convert_timestamp_to_datetime(df):
             pl.col("timestamp").str.to_datetime("%Y-%m-%d %H:%M:%S")
         )
     return df
+
+def calculate_days_since_start(data):
+    """Calculates the number of days since the start of the dataset and adds a new column to each event table.
+    The new column is named "days_since_start".
+    The days are calculated from the minimum timestamp in the dataset.
+
+    Args:
+        data (dict): dictionary with data loaded from the dataset in the format from load_data function
+        """
+    
+    timestamps = pl.concat([data["events"][df].select("timestamp") for df in data["events"]])
+    min_day = timestamps.min().collect().item()
+    for key in data["events"]:
+        data["events"][key] = data["events"][key].with_columns(
+            (pl.col("timestamp") - min_day).dt.total_days().alias("days_since_start")
+        )
