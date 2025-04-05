@@ -47,6 +47,9 @@ def load_data(data_folder):
         "targets": targets
     }
 
+    for key in data["events"]:
+        data["events"][key] = convert_timestamp_to_datetime(data["events"][key])
+    
     return data
 
 
