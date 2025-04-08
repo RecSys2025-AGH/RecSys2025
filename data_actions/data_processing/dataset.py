@@ -83,7 +83,7 @@ class DailyDataset:
         page_visits = self.data["events"]["page_visit"].select("client_id", "days_since_start", "url").group_by("client_id", "days_since_start").agg(
         [
             pl.col("client_id").count().alias("page_visits_count"),
-            #pl.col("url").value_counts(sort=True).struct.field("url").first().alias(f"most_common_visited_page")
+            pl.col("url").value_counts(sort=True).struct.field("url").first().alias(f"most_common_visited_page")
         ])
         self.event_counts["page_visit"] = page_visits
     
