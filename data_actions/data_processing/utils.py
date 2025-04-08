@@ -85,3 +85,18 @@ def calculate_days_since_start(data):
         data["events"][key] = data["events"][key].with_columns(
             (pl.col("timestamp") - min_day).dt.total_days().alias("days_since_start")
         )
+
+
+def parse_query_embedding(search_query):
+    """Parse the query embedding from the search_query table.
+
+    Args:
+        search_query (pl.LazyFrame): table with search_query events
+
+    Returns:
+        pl.LazyFrame: table with query column parsed to a list of integers
+    """
+    search_query = search_query.with_columns(
+        pl.col("query").str.slice(1, (pl.col("query").str.len_chars() - 2)).str.strip_chars().str.replace_all(r"\s+", " ", literal=False).str.split(" ").cast(pl.List(pl.Int64))
+    )
+    return search_query
