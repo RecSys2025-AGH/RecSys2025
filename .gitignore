@@ -3,6 +3,7 @@ data/processed_data
 solutions
 .vscode
 .idea
+.neptune
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
