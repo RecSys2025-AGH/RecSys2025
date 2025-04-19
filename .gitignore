@@ -4,6 +4,7 @@ solutions
 .vscode
 .idea
 .neptune
+organizers_codebase_
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
