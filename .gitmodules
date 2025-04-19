@@ -1,6 +1,3 @@
 [submodule "organizers_codebase"]
 	path = organizers_codebase
 	url = https://github.com/RecSys2025-AGH/recsys2025-organizers-codebase
-[submodule "organizers_codebase_"]
-	path = organizers_codebase_
-	url = https://github.com/Synerise/recsys2025
