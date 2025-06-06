@@ -5,6 +5,7 @@ solutions
 .idea
 .neptune
 organizers_codebase_
+*.npy
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
