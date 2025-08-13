@@ -1,4 +1,4 @@
-# RecSys2025-AGH
+# ENSEMBLE BERT4REC FOR RECSYS 2025 CHALLENGE
 
 This repository contains our solution developed for the **RecSys Challenge 2025**, aiming to create the best possible architecture to generate **Universal Behavioral Profiles (UBP)** of users based on their interactions with a system.  
 Our solution achieved a **top 50 place out of nearly 500 participating teams**, reflecting its competitive strength in this highly challenging task.
