@@ -94,6 +94,8 @@ By training **separate BERT4Rec instances** for each interaction type and **fusi
 
 This approach paves the way for **next-generation recommender systems** by fusing power from deep sequential models and ensemble strategies.
 
+The polish full project summary is available in the **project-summary.pdf** file.
+
 ---
 
 ## Repository Contents
